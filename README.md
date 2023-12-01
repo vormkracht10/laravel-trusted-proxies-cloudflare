@@ -1,4 +1,4 @@
-# Set Cloudflare as a Trusted Proxy in Laravel when you're using both.
+# Set Cloudflare as a Trusted Proxy in Laravel
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/vormkracht10/laravel-trusted-proxies-cloudflare.svg?style=flat-square)](https://packagist.org/packages/vormkracht10/laravel-trusted-proxies-cloudflare)
 [![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/vormkracht10/laravel-trusted-proxies-cloudflare/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/vormkracht10/laravel-trusted-proxies-cloudflare/actions?query=workflow%3Arun-tests+branch%3Amain)
