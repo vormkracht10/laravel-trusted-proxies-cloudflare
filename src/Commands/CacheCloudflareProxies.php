@@ -3,22 +3,33 @@
 namespace Vormkracht10\TrustedProxiesCloudflare\Commands;
 
 use Illuminate\Console\Command;
-use Vormkracht10\TrustedProxiesCloudflare\Actions\GetCloudflareIPs;
+use Illuminate\Console\Concerns\InteractsWithIO;
+use Vormkracht10\TrustedProxiesCloudflare\Actions\GetCloudflareProxies;
 
 class CacheCloudflareProxies extends Command
 {
+    use InteractsWithIO;
+
     public $signature = 'cloudflare:cache-trusted-proxies';
 
-    public $description = '';
+    public $description = 'Cache updated Cloudflare proxies';
 
     public function handle(): int
     {
-        $ips = (new GetCloudflareIPs)();
+        $ips = (new GetCloudflareProxies)();
 
-        dd($ips);
+        if (count($ips ?? [])) {
+            cache()
+                ->driver(config('trusted-proxies-cloudflare.cache.store'))
+                ->forever(config('trusted-proxies-cloudflare.cache.key'), $ips);
 
-        $this->comment('All done');
+            $this->components->info('Cached Cloudflare proxies.');
 
-        return self::SUCCESS;
+            return self::SUCCESS;
+        }
+
+        $this->components->error('Failed to cache Cloudflare proxies.');
+
+        return self::FAILURE;
     }
 }

@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'enabled' => (bool) env('TRUSTED_PROXIES_CLOUDFLARE_ENABLED', false),
+    'enabled' => (bool) env('TRUSTED_PROXIES_CLOUDFLARE_ENABLED', true),
 
     'cache' => [
         'key' => env('TRUSTED_PROXIES_CLOUDFLARE_CACHE_KEY', 'trusted-proxies-cloudflare'),
