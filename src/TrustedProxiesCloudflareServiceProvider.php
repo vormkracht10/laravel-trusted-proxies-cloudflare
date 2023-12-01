@@ -1,12 +1,12 @@
 <?php
 
-namespace Vormkracht10\LaravelTrustedProxiesCloudflare;
+namespace Vormkracht10\TrustedProxiesCloudflare;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Vormkracht10\LaravelTrustedProxiesCloudflare\Commands\LaravelTrustedProxiesCloudflareCommand;
+use Vormkracht10\TrustedProxiesCloudflare\Commands\CacheCloudflareProxies;
 
-class LaravelTrustedProxiesCloudflareServiceProvider extends PackageServiceProvider
+class TrustedProxiesCloudflareServiceProvider extends PackageServiceProvider
 {
     public function configurePackage(Package $package): void
     {
@@ -18,8 +18,6 @@ class LaravelTrustedProxiesCloudflareServiceProvider extends PackageServiceProvi
         $package
             ->name('laravel-trusted-proxies-cloudflare')
             ->hasConfigFile()
-            ->hasViews()
-            ->hasMigration('create_laravel-trusted-proxies-cloudflare_table')
-            ->hasCommand(LaravelTrustedProxiesCloudflareCommand::class);
+            ->hasCommand(CacheCloudflareProxies::class);
     }
 }

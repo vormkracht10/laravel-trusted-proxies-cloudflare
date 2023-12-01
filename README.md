@@ -44,8 +44,8 @@ php artisan vendor:publish --tag="laravel-trusted-proxies-cloudflare-views"
 ## Usage
 
 ```php
-$laravelTrustedProxiesCloudflare = new Vormkracht10\LaravelTrustedProxiesCloudflare();
-echo $laravelTrustedProxiesCloudflare->echoPhrase('Hello, Vormkracht10!');
+$TrustedProxiesCloudflare = new Vormkracht10\TrustedProxiesCloudflare();
+echo $TrustedProxiesCloudflare->echoPhrase('Hello, Vormkracht10!');
 ```
 
 ## Testing
@@ -68,8 +68,8 @@ Please review [our security policy](../../security/policy) on how to report secu
 
 ## Credits
 
-- [Mark van Eijk](https://github.com/markvaneijk)
-- [All Contributors](../../contributors)
+-   [Mark van Eijk](https://github.com/markvaneijk)
+-   [All Contributors](../../contributors)
 
 ## License
 

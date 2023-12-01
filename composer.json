@@ -34,13 +34,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Vormkracht10\\LaravelTrustedProxiesCloudflare\\": "src/",
-            "Vormkracht10\\LaravelTrustedProxiesCloudflare\\Database\\Factories\\": "database/factories/"
+            "Vormkracht10\\TrustedProxiesCloudflare\\": "src/",
+            "Vormkracht10\\TrustedProxiesCloudflare\\Database\\Factories\\": "database/factories/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Vormkracht10\\LaravelTrustedProxiesCloudflare\\Tests\\": "tests/"
+            "Vormkracht10\\TrustedProxiesCloudflare\\Tests\\": "tests/"
         }
     },
     "scripts": {
@@ -60,10 +60,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Vormkracht10\\LaravelTrustedProxiesCloudflare\\LaravelTrustedProxiesCloudflareServiceProvider"
+                "Vormkracht10\\TrustedProxiesCloudflare\\TrustedProxiesCloudflareServiceProvider"
             ],
             "aliases": {
-                "LaravelTrustedProxiesCloudflare": "Vormkracht10\\LaravelTrustedProxiesCloudflare\\Facades\\LaravelTrustedProxiesCloudflare"
+                "TrustedProxiesCloudflare": "Vormkracht10\\TrustedProxiesCloudflare\\Facades\\TrustedProxiesCloudflare"
             }
         }
     },

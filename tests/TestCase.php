@@ -1,10 +1,10 @@
 <?php
 
-namespace Vormkracht10\LaravelTrustedProxiesCloudflare\Tests;
+namespace Vormkracht10\TrustedProxiesCloudflare\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Vormkracht10\LaravelTrustedProxiesCloudflare\LaravelTrustedProxiesCloudflareServiceProvider;
+use Vormkracht10\TrustedProxiesCloudflare\TrustedProxiesCloudflareServiceProvider;
 
 class TestCase extends Orchestra
 {
@@ -13,14 +13,14 @@ class TestCase extends Orchestra
         parent::setUp();
 
         Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'Vormkracht10\\LaravelTrustedProxiesCloudflare\\Database\\Factories\\'.class_basename($modelName).'Factory'
+            fn (string $modelName) => 'Vormkracht10\\TrustedProxiesCloudflare\\Database\\Factories\\'.class_basename($modelName).'Factory'
         );
     }
 
     protected function getPackageProviders($app)
     {
         return [
-            LaravelTrustedProxiesCloudflareServiceProvider::class,
+            TrustedProxiesCloudflareServiceProvider::class,
         ];
     }
 
