@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace Vormkracht10\LaravelTrustedProxiesCloudflare\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class LaravelTrustedProxiesCloudflareCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'laravel-trusted-proxies-cloudflare';
 
     public $description = 'My command';
 
